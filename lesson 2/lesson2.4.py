@@ -7,5 +7,5 @@ from decimal import *
 from datetime import datetime
 current_datetime = datetime.now()
 a = Decimal(input("Введіть кількість гривень: "))
-b = a / Decimal(39.5)
+b = a / Decimal('39.5')
 print("Станом на ",current_datetime," це становить" ,b, " Долари США")

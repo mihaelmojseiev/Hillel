@@ -17,7 +17,7 @@ import math
 a=2
 b=5
 c=2
-x3=(-b+math.sqrt(b**2-4*a*c))/(2*a)
-x4=(-b-math.sqrt(b**2-4*a*c))/(2*a)
+x3=(-b+(b**2-4*a*c) ** .5)/(2*a)
+x4=(-b-(b**2-4*a*c) ** .5)/(2*a)
 print(x3)
 print(x4)
