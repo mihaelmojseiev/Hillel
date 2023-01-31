@@ -6,3 +6,5 @@ import math
 a = float(input("Введіть число для тангенса: "))
 tan = (1-(math.cos(a)**2) ** .5) / math.cos(a)
 print(tan)
+
+
