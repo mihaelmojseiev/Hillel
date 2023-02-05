@@ -4,5 +4,8 @@
 #... Дмитро
 #>>> Привіт, Дмитро!
 
-a = input("Введіть ваше ім'я: ")
-print("Привіт, " + a)
+#a = input("Введіть ваше ім'я: ")
+#print("Привіт, " + a)
+
+genom = str(input())
+print((genom.lower().count('g') + genom.lower().count('c'))/10*100)
