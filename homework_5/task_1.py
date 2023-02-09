@@ -6,12 +6,19 @@
 # def degrees2radians(degrees):
 #     radians = (degrees * math.pi)/180
 #     return radians
-
+from bs4 import BeautifulSoup
+import requests
 def currensy():
     url = 'https://dpva.ru/Guide/GuideMathematics/GuideMathematicsFiguresTables/CosinusTable0to360by1/'
     source = requests.get(url)
     soup = BeautifulSoup(source.content, 'html.parser')
-    print(soup)
+    table = soup.find("table", {"class": "nc_row"})
+    print(soup.prettify())
+currensy()
+
+
+
+
 
     # table = soup.find("table", {"class": "sc-1x32wa2-1 dYkgjk"})
     # tr = table.find("p", {"class": "sc-1x32wa2-9 glerpA"})
