@@ -2,11 +2,24 @@
 #
 # Написати функцію, яка буде переводити градуси в радіани (без використання math.radians).
 # Використовуючи цю функцію, вивести на екран значення косинусів кутів 60, 45 та 40 градусів.
-import math
-def degrees2radians(degrees):
-    radians = (degrees * math.pi)/180
-    return radians
+# import math
+# def degrees2radians(degrees):
+#     radians = (degrees * math.pi)/180
+#     return radians
 
-degrees = (int(input('Введи градусы: ')))
+def currensy():
+    url = 'https://dpva.ru/Guide/GuideMathematics/GuideMathematicsFiguresTables/CosinusTable0to360by1/'
+    source = requests.get(url)
+    soup = BeautifulSoup(source.content, 'html.parser')
+    print(soup)
 
-print(degrees2radians(degrees))
+    # table = soup.find("table", {"class": "sc-1x32wa2-1 dYkgjk"})
+    # tr = table.find("p", {"class": "sc-1x32wa2-9 glerpA"})
+    # tr = tr.text[:5]
+    # tr = tr.replace(",", ".")
+    # tr = float(tr)
+    # return (tr)
+
+# degrees = (int(input('Введи градусы: ')))
+#
+# print(degrees2radians(degrees))
