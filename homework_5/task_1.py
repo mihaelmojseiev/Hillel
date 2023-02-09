@@ -9,10 +9,10 @@
 from bs4 import BeautifulSoup
 import requests
 def currensy():
-    url = 'https://dpva.ru/Guide/GuideMathematics/GuideMathematicsFiguresTables/CosinusTable0to360by1/'
+    url = 'https://ru.onlinemschool.com/math/formula/sine_table/'
     source = requests.get(url)
     soup = BeautifulSoup(source.content, 'html.parser')
-    table = soup.find("table", {"class": "nc_row"})
+    table = soup.find("table", {"class": "oms_mnt"})
     print(soup.prettify())
 currensy()
 
