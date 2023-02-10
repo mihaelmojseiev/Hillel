@@ -1,11 +1,14 @@
 # Завдання 3.
 #
 # Написати функцію, яка обчислює площу та об'єм конуса за його радіусом та висотою. Функція має повертати два значення.
-def cone_square_and_volume(radius, height):  # returns 2 floats
-    pass
+import math
 
-radius,height = input('Введи радиус и высоту через запятую: ')
+def cone_square_and_volume(radius,height):
+    square = (math.pi * (radius**2))+(math.pi * radius * (math.sqrt(radius**2 + height**2)))
+    volume = (1 / 3) * (math.pi * radius**2 * height)
+    return (square,volume)
 
-sq = cone_square_and_volume(sq)
+radius = float(input('Введи радиус: '))
+height = float(input('Введи радиус высоту: '))
 
-print(sq)
+print('Площадь конуса: ', cone_square_and_volume(radius,height)[0], '\nОбъем конуса: ',cone_square_and_volume(radius,height)[1])
