@@ -1,14 +1,18 @@
-# Завдання 4.
-#
-# Написати функцію, що приймає безкінечну кількість чисел позиційними параметрами та іменований параметр start зі значенням за замовчуванням 0.
-# Функція має повертати суму усіх переданих параметрами чисел та числа start.
-# Функція повинна називатися my_sum. Для розрахунку суми використайте вбудовану функцію sum.
+def my_sum(*lst):
+    summ = sum(lst, start)
+    return summ
 
-def sum_of_numbers(*numbers, start=0):
-    result = start
-    for num in numbers:
-        result += num
-    return result
+list_data = input('Введи список чисел: ').split()
+start = int(input('Введи стартовое значение: '))
 
-summ = sum(10, 20, 30, 40)
-print(summ)
+lst = []
+
+for element in list_data:
+    if element.isdigit():
+        lst.append(int(element))
+    else:
+        print(f'{element} - не число ')
+        print('Давай заново')
+        exit()
+
+print(f'{my_sum(*lst)} твоя сумма чисел')
