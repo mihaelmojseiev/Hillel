@@ -1,10 +1,10 @@
-def my_sum(*lst, start=0):
-    summ = sum(lst, dop_start)
+def my_sum(*lst):
+    summ = sum(lst, start)
     return summ
 
 
 list_data = input('Введи список чисел: ').split()
-dop_start = int(input('Введи стартовое значение: '))
+start = int(input('Введи стартовое значение: '))
 
 lst = []
 
