@@ -8,5 +8,8 @@ def is_even(number):
     except:
         print('этот символ не номер')
 
+def main():
+    is_even(input('введи число: '))
 
-is_even(input('введи число: '))
+if __name__ == '__main__':
+    main()
