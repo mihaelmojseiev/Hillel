@@ -4,6 +4,7 @@ def fibonacci(n):
    else:
        return(fibonacci(n-1) + fibonacci(n-2))
 
+
 numb = (int(input('Введи номер: ')))
 
 if numb <= 0:
