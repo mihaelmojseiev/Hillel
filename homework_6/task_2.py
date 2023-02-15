@@ -7,20 +7,20 @@ def solve_quadratic_equation(a, b, c):
     if d > 0:
         x1 = (-b + sqrtr) / 2 * a
         x2 = (-b - sqrtr) / 2 * a
-        print(x1, x2)
+        return x1, x2
+
     elif d == 0:
-        x3 = -b / (2 * a)
-        print(x3)
-        print(None)
+        x3 = -b / 2 * a
+        return x3, None
+
     else:
-        print('x1 is None')
-        print('x2 is None')
+        return None
 
 
-a, b, c = map(float, input('введи три числа: ').split())
+def main():
+    a, b, c = map(float, input('введи три числа: ').split())
+    print(solve_quadratic_equation(a, b, c))
 
-if a == 0:
-    print("Неправильно а ввёл, повтори")
 
-else:
-    solve_quadratic_equation(a, b, c)
+if __name__ == '__main__':
+    main()

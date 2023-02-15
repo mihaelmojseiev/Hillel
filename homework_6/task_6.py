@@ -1,16 +1,19 @@
-x = int(input('Введи x: '))
-
-
 def sign(x):
     if x > 0:
         res = 1
-        print(res)
+        return res
     elif x < 0:
         res = -1
-        print(res)
+        return res
     elif x == 0:
         res = 0
-        print(res)
+        return res
 
 
-sign(x)
+def main():
+    x = int(input('Введи x: '))
+    print(sign(x))
+
+
+if __name__ == '__main__':
+    main()
