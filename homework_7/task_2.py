@@ -1,26 +1,11 @@
-# Завдання 2.
-#
-# Створити програму, що виводить на екран числа від 1 до 100 при цьому заміняючи:
-#
-# числа, що діляться на 3, на рядок Fizz
-# числа, що діляться на 5, на рядок Buzz
-# числа, що діляться і на 3, і на 5, на рядок FizzBuzz
-# Приклад виводу:
-#
-# 1
-# 2
-# Fizz
-# 4
-# Buzz
-# Fizz
-# 7
-# 8
-# Fizz
-# Buzz
-# 11
-# Fizz
-# 13
-# 14
-# FizzBuzz
-# 16
-# ...
+for fizzbuzz in range(1, 101):
+    if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
+        print('FizzBuzz')
+        continue
+    elif fizzbuzz % 5 == 0:
+        print('Buzz')
+        continue
+    elif fizzbuzz % 3 == 0:
+        print('Fizz')
+        continue
+    print(fizzbuzz)
