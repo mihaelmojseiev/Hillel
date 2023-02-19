@@ -10,8 +10,15 @@
 # calculate_wheat_chess_position(kilograms)  # prints 'b3'
 
 
-calculate_wheat_chess_position(kilograms)
+def calculate_wheat_chess_position(kilograms):
+    point = input('Какая клетка: ')
+    secondp = kilograms ** point
+    return secondp
 
 
 def main():
     kilograms = 0.03584
+    print(calculate_wheat_chess_position(kilograms))
+
+if __name__ == '__main__':
+    main()
