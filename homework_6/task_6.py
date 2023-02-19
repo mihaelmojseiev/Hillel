@@ -1,13 +1,10 @@
 def sign(x):
     if x > 0:
-        res = 1
-        return res
+        return 1
     elif x < 0:
-        res = -1
-        return res
+        return -1
     elif x == 0:
-        res = 0
-        return res
+        return 0
 
 
 def main():

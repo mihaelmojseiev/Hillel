@@ -3,7 +3,7 @@ def is_even(number):
 
 
 def main():
-    print(bool(is_even(2)))
+    print(is_even(2))
 
 
 if __name__ == '__main__':

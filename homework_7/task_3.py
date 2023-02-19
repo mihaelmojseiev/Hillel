@@ -8,3 +8,10 @@
 #
 # kilograms = 0.03584  # 35mg per seed, 1024 seeds
 # calculate_wheat_chess_position(kilograms)  # prints 'b3'
+
+
+calculate_wheat_chess_position(kilograms)
+
+
+def main():
+    kilograms = 0.03584
