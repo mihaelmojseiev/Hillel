@@ -8,9 +8,9 @@ def sign(x):
 
 
 def main():
-    x = int(input('Введи x: '))
+    x = int(input("Введи x: "))
     print(sign(x))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

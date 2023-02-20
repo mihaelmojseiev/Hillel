@@ -6,5 +6,5 @@ def main():
     print(is_even(2))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
