@@ -1,10 +1,7 @@
 def chessboard(x1, y1, x2, y2):
     rx = abs(x1 - x2)
     ry = abs(y1 - y2)
-    if rx == 1 and ry == 2 or rx == 2 and ry == 1:
-        return True
-    else:
-        return False
+    return rx == 1 and ry == 2 or rx == 2 and ry == 1
 
 
 def main():

@@ -1,19 +1,18 @@
-# Завдання 3.
-#
-# Згідно з древньою індійською легендою творець гри в шахи за свій винахід попросив у раджі незначну на перший погляд винагороду:
-# стільки пшеничних зерен, скільки опиниться на шаховій дошці, якщо на першу клітинку покласти одне зерно, на другу -- два зерна,
-# на третю -- чотири, і т.д.. Виявилося, що такої кількості зерна немає на усій планеті (2**64-1 зерен). Напишіть програму,
-# що вираховує починаючи з якої клітинки дошки раджі треба було віддати Nкг зерна, де N -- вводить користувач.
-# Прийняти вагу однієї зернинки за 35мг. Номер клітинки виводити в букво-циферних традиційних шахових координатах. Наприклад:
-#
-# kilograms = 0.03584  # 35mg per seed, 1024 seeds
-# calculate_wheat_chess_position(kilograms)  # prints 'b3'
-
-
 def calculate_wheat_chess_position(kilograms):
-    point = input("Какая клетка: ")
-    secondp = kilograms**point
-    return secondp
+    seeds_kg_input = float(input("Введи кол-во кг зерна: "))
+    seeds_count_from_input = int(seeds_kg_input / kilograms * 1000000)
+    square = 1
+    seeds_on_square = 1
+    seeds_count_on_board = 0
+    while seeds_count_on_board < seeds_count_from_input:
+        seeds_count_on_board += seeds_on_square
+        if seeds_count_on_board >= seeds_count_from_input:
+            break
+        seeds_on_square *= 2
+        square += 1
+    column = (square - 1) // 8 + 1
+    row = chr((square - 1) % 8 + ord("A"))
+    return column, row
 
 
 def main():
