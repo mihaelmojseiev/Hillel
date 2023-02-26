@@ -19,7 +19,7 @@ def main():
     number = random.randint(10**11, (10**12)-1)
     print(number)
     print(get_max_digit(number))
-    print(get_max_digit_strnumber))
+    print(get_max_digit_str(number))
 
 
 if __name__ == "__main__":
