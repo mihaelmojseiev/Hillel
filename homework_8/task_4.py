@@ -1,11 +1,16 @@
-# Завдання 4.
-# Написати функцію, що повертає усі прості числа від 1 до 100 у вигляді списку.
-# def gen_primes():  # returns list of ints
-#     pass
+def gen_primes():  # returns list of ints
+    primes = []
+    for num in range(2, 101):
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            primes.append(num)
+    return primes
 
 
 def main():
-    print(index(lst, elem))
+    print(gen_primes())
 
 
 if __name__ == "__main__":

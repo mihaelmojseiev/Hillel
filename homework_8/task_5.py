@@ -1,12 +1,20 @@
-# Завдання 5.
-# Написати функцію, що повертає найбільшу цифру випадкового 12-ти-значного натурального числа а) з використанням рядків б) без використання рядків. Число для тестування можна отримати або від користувача, або згенерувати за допомогою функції randint з модулю random.
-# 	def get_max_digit(number): # returns int
-#              pass
+import random
 
+
+def get_max_digit(number):
+    max_digit = 0
+    while number > 0:
+        digit = number % 10
+        if digit > max_digit:
+            max_digit = digit
+        number //= 10
+    return max_digit
 
 
 def main():
-    print(index(lst, elem))
+    number = random.randint(10**11, (10**12) - 1)
+    print(number)
+    print(get_max_digit(number))
 
 
 if __name__ == "__main__":

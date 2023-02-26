@@ -1,32 +1,12 @@
-# Дано список з чисел та рядків. Рядки у списку завжди непорожні та складаються тільки з символів 0123456789.
-# За допомогою функції sorted() отримати копію цього списку.
-# Тип оригінальних елементів не має бути змінено, тобто числа мають лишитися числами, рядки -- рядками.
-# a) Копія має бути відсортована за значенням числа елементу. Наприклад:
-# # original list
-# [5, '9', 0, '452', 6.5, '6', 1, 2]
-# # sorted list
-# [0, 1, 2, 5, '6', 6.5, '9', '452']
-# б) Копія має бути відсортована за значенням ПЕРШОЇ цифри числа.
-# Наприклад (в прикладі немає помилки, відсортовано правильно, за першою цифрою):
-# # original list
-# [472, 326, 1, 999.0, '1101000', '99', 9, '20', 863, '0']
-# # sorted list
-# ['0', 1, '1101000', '20', 326, 472, 863, 999.0, '99', 9]
-# def get_first_num(lst):
-#     if isinstance(lst, str) and not lst.isnumeric():
-#         return 9999
-#     return int(str(lst)[0])
-
-
 def main():
-    lst1a = [5, '9', 0, '452', 6.5, '6', 1, 2]
-    lst2b = [472, 326, 1, 999.0, '1101000', '99', 9, '20', 863, '0']
-    sorted_lst1a = sorted(lst1a, key=lambda x: (isinstance(x, str), x))
-    # lst2b.sort(key=get_first_num
-    sorted_lst2b = sorted(lst2b, key=lambda x: (isinstance(x, str), x))
-    print(sorted_lst1a)
-    # print(lst2b)
-    print(int(str(sorted_lst2b)[0]))
+    lst1 = [5, "9", 0, "452", 6.5, "6", 1, 2]
+    lst2 = [472, 326, 1, 999.0, "1101000", "99", 9, "20", 863, "0"]
+    sorted_lst1 = sorted(lst1, key=lambda x: (isinstance(x, str), x))
+    sorted_lst2 = sorted(
+        lst2, key=lambda x: int(str(x)[0]) if isinstance(x, str) else int(str(x)[0])
+    )
+    print(sorted_lst1)
+    print(sorted_lst2)
 
 
 if __name__ == "__main__":
